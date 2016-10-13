@@ -1,4 +1,4 @@
-package com.gvi.calculatrice;
+package com.gvi.servlets;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -43,8 +43,8 @@ public class Calculatrice extends HttpServlet {
 		request.setAttribute("numberRight", numberRightStr);
 		request.setAttribute("numberLeft", numberLeftStr);
 		request.setAttribute("action", action);
-		//La phrase à afficher est directement générée par la classe Compute
-		request.setAttribute("resultStr", compute.toString());
+		//renvoie l'objet compute
+		request.setAttribute("compute", compute);
 		this.getServletContext().getRequestDispatcher(calculatriceView).forward(request, response);
 	}
 

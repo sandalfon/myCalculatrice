@@ -8,7 +8,7 @@
     </head>
     <body>
     	<!-- affichage de la phrase réponse  -->
-        <p>${ ! empty resultStr ? resultStr  : '' } </p>
+        <p>${ ! empty compute.toString() ? compute.toString()  : '' } </p>
         <!-- formulaire à remplir -->
         <form method="post" action="">
 	        <input type="number" name="numberLeft" id="numberLeft">        
